@@ -36,13 +36,13 @@ endif
 # Debug Build
 build: $(B_OBJS) build/lib
 	@mkdir -p bin/build bin/build/debug bin/build/debug/$(PROJECT)
-	$(CXX) $(CFLAGS) $(B_LIBS) $(B_OBJS) -o $(B_BIN)/$(EXE)
+	$(CXX) $(CFLAGS) -Lbin/build/debug/$(PROJECT)/ $(B_OBJS) -o $(B_BIN)/$(EXE) $(patsubst bin/build/debug/$(PROJECT)/lib%$(LIB_EXT), -l%, $(L_SRCS))
 
 # Release Build
 release: CFLAGS += -O2
 release: $(R_OBJS) release/lib
 	@mkdir -p bin/build bin/build/release bin/build/release/$(PROJECT)
-	$(CXX) $(CFLAGS) $(R_LIBS) $(R_OBJS) -o $(R_BIN)/$(EXE)
+	$(CXX) $(CFLAGS) -Lbin/build/release/$(PROJECT)/ $(R_OBJS) -o $(R_BIN)/$(EXE) $(patsubst bin/build/release/$(PROJECT)/lib%$(LIB_EXT), -l%, $(L_SRCS))
 
 # Libs Building Target
 build/lib: $(L_B_OBJS) $(B_LIBS)
