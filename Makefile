@@ -112,7 +112,7 @@ $(RELEASE_OBJDIR)/lib/%.o: $(CUSTOM_LIB_SRCDIR)/%.cpp
 	$(CXX) $(CFLAGS_RELEASE) $? -c -o $@
 
 ### Other Targets ###
-run/build:
+run/debug:
 	@./$(DEBUG_BUILD_DIR)/$(EXE)
 
 run/release:
