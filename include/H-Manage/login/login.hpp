@@ -1,5 +1,5 @@
-#ifndef SRC_HMANAGE_LIB_LOGIN_HPP_
-#define SRC_HMANAGE_LIB_LOGIN_HPP_
+#ifndef HMANAGE_LIB_LOGIN_HPP_
+#define HMANAGE_LIB_LOGIN_HPP_
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -52,4 +52,4 @@ public:
   bool get_logged_hotel_address(string *address);
 };
 
-#endif // SRC_HMANAGE_LIB_LOGIN_HPP_
+#endif // HMANAGE_LIB_LOGIN_HPP_

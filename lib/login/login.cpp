@@ -1,4 +1,4 @@
-#include "H-Manage/lib/login.hpp"
+#include "H-Manage/login/login.hpp"
 
 // Singleton Implementation for DLL
 /* https://stackoverflow.com/questions/21333935/using-a-singleton-across-dll-boundary/31181493#31181493 */
